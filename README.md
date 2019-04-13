@@ -1,5 +1,5 @@
 # Sql Server: Cursor that automate shrink all logs
-With this sql cursor statement, is possible to Shrink all Database Logs that increased your size, applicable at large and complex MSSQL instances with many databases (excluding master, model, msdb and tempdb)
+With this sql cursor statement, is possible to Shrink all Database Logs that increased your size; this sql statement was applied at large and complex MSSQL instances with many databases (excluding master, model, msdb and tempdb), sql job tasks. 
 .
 ```sql
 SET NOCOUNT ON;
