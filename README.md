@@ -18,7 +18,7 @@ FETCH NEXT FROM clear_logs_cursor INTO @name;
 
 WHILE @@FETCH_STATUS = 0
    BEGIN
-	  PRINT 'Inicia a limpeza de LOG na base de dados ' + @name;
+	  PRINT 'Start shrink process at a Log Database ' + @name;
 	  
 		SET @DBName = @name;
  
@@ -39,10 +39,10 @@ WHILE @@FETCH_STATUS = 0
 
       FETCH NEXT FROM clear_logs_cursor INTO @name;
       
-      PRINT 'Sucesso! A pr�xima base de dados a realizar limpeza de LOG ser� ' + @name;
+      PRINT 'Success! The next database to be shrinked is ' + @name;
       
    END;
-PRINT 'Finaliza a limpeza de LOGs';
+PRINT 'Ends all process';
 
 CLOSE clear_logs_cursor;
 DEALLOCATE clear_logs_cursor;
